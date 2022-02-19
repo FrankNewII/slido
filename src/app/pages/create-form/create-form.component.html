@@ -1,0 +1,19 @@
+<h1>Creating event</h1>
+<form [formGroup]="eventForm" (ngSubmit)="addEvent()">
+  <div class="first-line mb8 d-flex-inline d-flex-inline-space">
+    <input-component formControlName="date"
+                     (click)="openCalendar()"
+                     [value]="selected"
+                     [displayLike]="formatDate"
+                     placeholder="Choose Date">
+    </input-component>
+    <input-component formControlName="name" placeholder="Name"></input-component>
+  </div>
+
+  <input-component formControlName="description" placeholder="Description"></input-component>
+
+  <div class="controls">
+    <button-component [disabled]="!eventForm.valid">Submit</button-component>
+  </div>
+</form>
+

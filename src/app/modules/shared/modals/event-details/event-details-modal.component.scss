@@ -1,0 +1,35 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    background-color: var(--white-color);
+    width: calc(100% - 2rem);
+    max-width: 40rem;
+    max-height: 25rem;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transform: scale(.9);
+    padding: var(--s4) var(--s16);
+    transition: opacity .2s, transform .2s;
+
+    &.loaded {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    div {
+      overflow: auto;
+      p {
+        margin-top: var(--s4);
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}

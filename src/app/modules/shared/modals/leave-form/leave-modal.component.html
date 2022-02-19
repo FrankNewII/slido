@@ -1,0 +1,7 @@
+<div class="container" [class.loaded]="opened">
+  <h2>You are about to leave the form</h2>
+  <div class="controls">
+    <button-component (click)="close(true)">Leave</button-component>
+    <button-component (click)="close(false)">Stay</button-component>
+  </div>
+</div>

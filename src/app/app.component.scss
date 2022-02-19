@@ -1,0 +1,29 @@
+:host {
+  height: 100%;
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--transparent-color);
+    transition: filter .2s, background-color .3s;
+    filter: blur(0px);
+
+    &.modal-opened {
+      background-color: var(--gray-color);
+      filter: blur(2px);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      div {
+        padding: 0 var(--s10);
+        width: 100%;
+        max-width: 40rem;
+      }
+    }
+  }
+}

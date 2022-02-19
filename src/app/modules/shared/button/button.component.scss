@@ -1,0 +1,58 @@
+button-component {
+  display: inline-block;
+  margin: 0 var(--s2);
+
+  button {
+    cursor: pointer;
+
+    &.primary {
+      line-height: 2.5rem;
+      padding: var(--s4) 2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--border-radius);
+      white-space: nowrap;
+      transition: background-color .3s, color .3s;
+      color: white;
+
+      &.green {
+        background-color: var(--green-color);
+      }
+
+      &.gray {
+        background-color: var(--gray-color);
+      }
+
+      &:hover {
+        background-color: var(--black-color);
+      }
+    }
+
+    &.circle {
+      border: var(--s2) solid;
+      border-radius: var(--s16);
+      height: 2rem;
+      width: 2rem;
+      background-color: var(--transparent-color);
+
+      &.green {
+        color: var(--green-color);
+        border-color: var(--green-color);
+      }
+
+      &.gray {
+        color: var(--gray-color);
+        border-color: var(--gray-color);
+      }
+
+      &:hover {
+        color: var(--black-color);
+        border-color: var(--black-color);
+      }
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+  }
+}

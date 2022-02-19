@@ -1,0 +1,10 @@
+<div class="app-container" [class.modal-opened]="opened">
+  <header-component></header-component>
+  <main>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer-component></footer-component>
+</div>
+<modal-portal-component></modal-portal-component>

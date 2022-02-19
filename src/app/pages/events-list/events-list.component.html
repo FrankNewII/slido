@@ -1,0 +1,16 @@
+<h1>
+  Events list
+</h1>
+<div class="list-container">
+  <div *ngFor="let event of list$ | async" class="event mb4" (click)="openDetails(event)">
+    <div class="date">
+      {{ event.date | date }}
+    </div>
+    <div class="name">
+      {{ event.name }}
+    </div>
+    <div class="control">
+      <button-component type="circle">+</button-component>
+    </div>
+  </div>
+</div>

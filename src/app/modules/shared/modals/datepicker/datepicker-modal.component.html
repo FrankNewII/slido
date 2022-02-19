@@ -1,0 +1,10 @@
+<div class="container" [class.loaded]="opened">
+  <h2>Choose Event Date</h2>
+  <div>
+    <mat-calendar  [(selected)]="selected"></mat-calendar>
+  </div>
+  <div class="control">
+    <button-component (click)="close()">Submit</button-component>
+  </div>
+</div>
+

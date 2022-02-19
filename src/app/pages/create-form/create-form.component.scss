@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  form {
+    overflow: auto;
+    padding-bottom: 1rem;
+
+    .first-line {
+      input-component {
+        width: calc(50% - var(--s10));
+      }
+    }
+
+    .controls {
+      margin-top: 2rem;
+      text-align: right;
+    }
+  }
+}
+

@@ -1,0 +1,85 @@
+input-component {
+  height: 2.25rem;
+  width: 100%;
+  display: inline-block;
+
+  &.disabled {
+    input {
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+  input {
+    border: none;
+    font-size: var(--s14);
+    padding: var(--s10) 0;
+    background-color: var(--transparent-color);
+    width: 100%;
+
+    &:focus {
+      outline: none;
+
+      ~ .notes hr:before {
+        width: 100%;
+      }
+    }
+
+    &::placeholder {
+      font-size: .75rem;
+    }
+  }
+
+  .notes {
+    position: relative;
+
+    hr {
+      margin: 0;
+      height: 1px;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, .1);
+
+      &.focused {
+        &:before {
+          background-color: var(--black-color);
+        }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: var(--s2);
+        background-color: black;
+        transition: background-color .3s, width .3s;
+      }
+    }
+  }
+
+  &.ng-dirty {
+    &.ng-valid {
+      .notes hr {
+        background-color: var(--green-color);
+
+        &:before {
+          background-color: var(--green-color);
+        }
+      }
+    }
+
+    &.ng-invalid {
+      input {
+        color: var(--red-color);
+      }
+
+      .notes hr {
+        background-color: var(--red-color);
+
+        &:before {
+          background-color: var(--red-color);
+        }
+      }
+    }
+  }
+}

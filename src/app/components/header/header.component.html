@@ -1,0 +1,16 @@
+<header>
+  <div class="logo">
+    <img src="assets/images/slido-logo-c79e792.svg" alt="logo">
+  </div>
+  <div class="search">
+    <input-component placeholder="Search by name, description or date" (changed)="eventsState.updateFilter($event)" [value]="filter$ | async">
+      <input-hint-component>
+        {{ (list$ | async)?.length + ' found' }}
+      </input-hint-component>
+    </input-component>
+  </div>
+  <div class="controls">
+    <button-component [routerLink]="EPages.Create" routerLinkActive="hidden" >+ Add Event</button-component>
+    <button-component color="gray" [routerLink]="EPages.List" routerLinkActive="hidden">< Back to list</button-component>
+  </div>
+</header>

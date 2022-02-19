@@ -1,0 +1,11 @@
+<div class="container d-flex" (click)="close()" [class.loaded]="opened">
+  <h2>Event Details</h2>
+  <div class="scrollable">
+    <strong>Name:</strong>
+    <p>{{data?.name}}</p>
+    <strong>Date:</strong>
+    <p>{{data?.date | date}}</p>
+    <strong>Description:</strong>
+    <p>{{data?.description}}</p>
+  </div>
+</div>

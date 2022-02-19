@@ -1,0 +1,12 @@
+<input type="text"
+       (focus)="state = EInputComponentStates.Focused"
+       (blur)="state = EInputComponentStates.Touched"
+       (keyup)="onKeyUp($event)"
+       [placeholder]="placeholder"
+       [value]="displayLike(value)"/>
+<div class="notes">
+  <hr [class]="state"/>
+  <ng-content *ngIf="state === EInputComponentStates.Invalid" select="input-error-component"></ng-content>
+  <ng-content *ngIf="state === EInputComponentStates.Focused" select="input-hint-component"></ng-content>
+</div>
+

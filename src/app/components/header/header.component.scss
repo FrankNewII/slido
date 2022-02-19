@@ -1,0 +1,27 @@
+:host {
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--s10);
+    box-shadow: 0 var(--s2) var(--s2) var(--box-shadow-color);
+    height: 5rem;
+    justify-content: space-between;
+
+    .search {
+      width: 100%;
+      max-width: 20rem;
+      padding-left: var(--s10);
+      padding-right: var(--s10);
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 5rem;
+    }
+
+    .controls {
+      margin: 0;
+    }
+  }
+}

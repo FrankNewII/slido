@@ -1,0 +1,26 @@
+mat-calendar {
+  tr:first-child .mat-calendar-body-label {
+    display: none;
+  }
+
+  .mat-button, .mat-calendar-table-header {
+    color: var(--green-color);
+  }
+
+  .mat-calendar-body-cell-content {
+    color: var(--black-color);
+  }
+
+  .mat-calendar-arrow {
+    fill: var(--green-color);
+  }
+
+  .mat-calendar-body-selected {
+    background-color: var(--green-color);
+    color: var(--white-color);
+  }
+
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: var(--green-color);
+  }
+}

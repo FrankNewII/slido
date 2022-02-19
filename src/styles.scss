@@ -1,0 +1,38 @@
+@import "assets/styles/index";
+
+:root {
+  --green-color: #39ac37;
+  --gray-color: rgba(66, 66, 66, 0.5);
+  --black-color: black;
+  --red-color: #d35130;
+  --white-color: white;
+  --transparent-color: transparent;
+  --box-shadow-color: rgba(0, 0, 0, .1);
+
+  --s1: .0625rem;
+  --s2: .125rem;
+  --s4: .25rem;
+  --s8: .5rem;
+  --s10: .625rem;
+  --s14: .875rem;
+  --s16: 1rem;
+
+  --border-radius: var(--s4);
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: verdana,arial,sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
